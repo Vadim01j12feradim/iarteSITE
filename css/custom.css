@@ -1090,7 +1090,7 @@ hr.dotted {
 }
 
 #uno {
-  background: #C06437 url(../images/uno.png) right center no-repeat;
+  background: #C06437; /*url(../images/uno.png) right center no-repeat;*/
   background-size: contain;
   margin-top: 50px;
   padding: 20px;
@@ -1136,7 +1136,7 @@ hr.b-blanco {
 }
 
 #dos {
-  background: #FBE0B6 url(../images/dos.png) right center no-repeat;
+  background: #FBE0B6;/* url(../images/dos.png) right center no-repeat;*/
   background-size: contain;
   margin-top: 0;
   padding: 20px;
@@ -1208,14 +1208,14 @@ hr.b-negro {
 }
 
 #tres {
-  background: #CD9F26 url(../images/tres.png) right center no-repeat;
+  background: #CD9F26;/* url(../images/tres.png) right center no-repeat;*/
   background-size: contain;
   margin-top: 0;
   padding: 20px;
 }
 
 #cuatro {
-  background: #008581 url(../images/cuatro.png) right center no-repeat;
+  background: #008581;/* url(../images/cuatro.png) right center no-repeat;*/
   background-size: contain;
   margin-top: 0;
   padding: 20px;
