@@ -162,7 +162,7 @@
 			</div>
 			<div class="breadcrumbs">INICIO &gt; Convocatoria</div>
 		</div>
-		<!-- END BANNER asdasdasdassda-->
+		<!-- END BANNER -->
 
 		<div id="info-principal">
             <div class="container" style="width:80%;margin-top:30px;" >
