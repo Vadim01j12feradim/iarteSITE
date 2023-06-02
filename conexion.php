@@ -11,9 +11,28 @@
         if ($conexion->connect_error) {
             die("Conexión fallida: " . $conexion->connect_error);
         }else{
-            echo "Conexión exitosa";
+           
             return $conexion;
         }   
     }
+
+    function desconectar($conexion){
+        mysqli_close($conexion);
+    }
+
+// Ejecutar query
+    function ejecutar($conexion, $query){
+        if(mysqli_query($conexion, $query)){
+            return true;    
+        }else{
+            echo mysqli_error($conexion);
+        }
+    }
+
+//Ejecutar select
+    function select($conexion, $query){
+        return mysqli_query($conexion, $query);
+    }
+
 
 ?>
