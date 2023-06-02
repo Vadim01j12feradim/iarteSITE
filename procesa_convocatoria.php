@@ -9,6 +9,7 @@
     $municipio = $_POST['municipio'];
     $colonia = $_POST['colonia'];
     $ocupacion = $_POST['ocupacion'];
+    $nacionalidad = $_POST['nacionalidad'];
 
     $identificacion = $telefono.$_FILES['identificacion']['name'];
     $tmpIdentificacion = $_FILES['identificacion']['tmp_name'];
@@ -91,7 +92,7 @@
     $rutaCom = 'archivos/'.$comprobante;
     $rutaMan = 'archivos/'.$manifiesto;
 
-    $query = "INSERT INTO registro(nombre, telefono, correo, edad, estado, municipio, colonia, ocupacion, identificacion,comprobante, imagen1, cadena1, imagen2, cadena2, imagen3, cadena3, imagen4, cadena4, manifiesto) VALUES('$nombre','$telefono','$correo',$edad,'$estado','$municipio','$colonia','$ocupacion','$rutaIde','$rutaCom','$rutaI1','$cadena1','$rutaI2','$cadena2','$rutaI3','$cadena3','$rutaI4','$cadena4','$rutaMan')";
+    $query = "INSERT INTO registro(nombre, telefono, correo, edad, estado, municipio, colonia, ocupacion, ncionalidad, identificacion,comprobante, imagen1, cadena1, imagen2, cadena2, imagen3, cadena3, imagen4, cadena4, manifiesto) VALUES('$nombre','$telefono','$correo',$edad,'$estado','$municipio','$colonia','$ocupacion','$nacionalidad','$rutaIde','$rutaCom','$rutaI1','$cadena1','$rutaI2','$cadena2','$rutaI3','$cadena3','$rutaI4','$cadena4','$rutaMan')";
 
     $conexion = conectar();
 
