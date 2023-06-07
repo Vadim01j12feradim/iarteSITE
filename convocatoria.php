@@ -183,43 +183,43 @@
                                 
                                     <div class="form-group"> 
                                         <label for="telefono" class="control-label">* Teléfono</label>
-                                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="" required>
+                                        <input type="text" class="form-control"  placeholder="Ingresa tu teléfono" id="telefono" name="telefono" placeholder="" required>
                                     </div>                    
                                                             
                                     <div class="form-group"> 
                                         <label for="correo" class="control-label">* Correo</label>
-                                        <input type="email" class="form-control" id="correo" name="correo" placeholder="" required>
+                                        <input type="email" class="form-control" placeholder="Ingresa tu correo" id="correo" name="correo" placeholder="" required>
                                     </div>    
                                 
                                     <div class="form-group"> 
                                         <label for="edad" class="control-label">* Edad</label>
-                                        <input type="number" style="width:15%" class="form-control" min="18" max="80" id="edad" name="edad" placeholder="" required>
+                                        <input type="number" style="width:15%" placeholder="Ingresa tu edad" class="form-control" min="18" max="80" id="edad" name="edad" placeholder="" required>
                                     </div>        
                                     
                                     <div class="form-group"> 
                                         <label for="estado" class="control-label">* Estado</label>
-                                        <input type="text" class="form-control" id="estado" name="estado" placeholder="" required>
+                                        <input type="text" class="form-control" placeholder="Ingresa tu estado" id="estado" name="estado" placeholder="" required>
                                     </div>  
         
                                     <div class="form-group"> 
                                         <label for="municipio" class="control-label">* Municipio</label>
-                                        <input type="text" class="form-control" id="municipio" name="municipio" placeholder="" required>
+                                        <input type="text" class="form-control" id="municipio" placeholder="Ingresa tu municipio" name="municipio" placeholder="" required>
                                     </div> 
         
                                     <div class="form-group"> 
                                         <label for="colonia" class="control-label">* Colonia</label>
-                                        <input type="text" class="form-control" id="colonia" name="colonia" placeholder="" required>
+                                        <input type="text" class="form-control"  placeholder="Ingresa tu colonia" id="colonia" name="colonia" placeholder="" required>
                                     </div> 
                                                             
                                     
                                     <div class="form-group"> 
                                         <label for="ocupacion" class="control-label">* Ocupación</label>
-                                        <input type="text" class="form-control" id="ocupacion" name="ocupacion" placeholder="" required>
+                                        <input type="text" class="form-control" placeholder="Ingresa tu ocupación" id="ocupacion" name="ocupacion" placeholder="" required>
                                     </div>  
                                     
                                     <div class="form-group"> 
                                         <label for="nacionalidad" class="control-label">* Nacionalidad</label>
-                                        <input type="text" class="form-control" id="nacionalidad" name="nacionalidad" placeholder="" required>
+                                        <input type="text" class="form-control" id="nacionalidad" placeholder="Ingresa tu nacionalidad" name="nacionalidad" placeholder="" required>
                                     </div>  
         
                                     <br>
@@ -269,7 +269,7 @@
         
                                     <div class="form-group"> 
                                         <label for="cadena1" class="control-label">Cadena de texto generadora de la imagen:</label>
-                                        <textarea style="height:100px" class="form-control" id="cadena1" name="cadena1" placeholder=""></textarea>
+                                        <textarea style="height:100px" class="form-control" placeholder="Ingresa la cadena de texto generadora de la imagen" id="cadena1" name="cadena1" placeholder=""></textarea>
                                     </div> 
                                     <br>
                                     <div class="form-group">
@@ -280,7 +280,7 @@
         
                                     <div class="form-group"> 
                                         <label for="cadena2" class="control-label">Cadena de texto generadora de la imagen:</label>
-                                        <textarea style="height:100px" class="form-control" id="cadena2" name="cadena2" placeholder=""></textarea>
+                                        <textarea style="height:100px" class="form-control" placeholder="Ingresa la cadena de texto generadora de la imagen" id="cadena2" name="cadena2" placeholder=""></textarea>
                                     </div> 
             
             
@@ -299,7 +299,7 @@
         
                                     <div class="form-group"> 
                                         <label for="cadena3" class="control-label">Cadena de texto generadora de la imagen:</label>
-                                        <textarea style="height:100px" class="form-control" id="cadena3" name="cadena3" placeholder=""></textarea>
+                                        <textarea style="height:100px" placeholder="Ingresa la cadena de texto generadora de la imagen" class="form-control" id="cadena3" name="cadena3" placeholder=""></textarea>
                                     </div> 
                                     <br>
                                     <div class="form-group">
@@ -310,7 +310,7 @@
         
                                     <div class="form-group"> 
                                         <label for="cadena4" class="control-label">Cadena de texto generadora de la imagen:</label>
-                                        <textarea style="height:100px" class="form-control" id="cadena4" name="cadena4" placeholder=""></textarea>
+                                        <textarea placeholder="Ingresa la cadena de texto generadora de la imagen" style="height:100px" class="form-control" id="cadena4" name="cadena4" placeholder=""></textarea>
                                     </div>  
         
                                     </div>
