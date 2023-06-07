@@ -178,48 +178,48 @@
                                     <label for="nombre" class="control-label">Los campos marcados con * son OBLIGATORIOS </label>
                                     <div class="form-group"> 
                                         <label for="nombre" class="control-label">* Nombre completo:</label>
-                                        <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo" name="nombre" placeholder="" required>
+                                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" required>
                                     </div>    
                                 
                                     <div class="form-group"> 
-                                        <label for="telefono" class="control-label">* Teléfono</label>
-                                        <input type="text" class="form-control"  placeholder="Ingresa tu teléfono" id="telefono" name="telefono" placeholder="" required>
+                                        <label for="telefono" class="control-label">* Teléfono:</label>
+                                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="" required>
                                     </div>                    
                                                             
                                     <div class="form-group"> 
-                                        <label for="correo" class="control-label">* Correo</label>
-                                        <input type="email" class="form-control" placeholder="Ingresa tu correo" id="correo" name="correo" placeholder="" required>
+                                        <label for="correo" class="control-label">* Correo:</label>
+                                        <input type="email" class="form-control" id="correo" name="correo" placeholder="" required>
                                     </div>    
                                 
                                     <div class="form-group"> 
-                                        <label for="edad" class="control-label">* Edad</label>
-                                        <input type="number" style="width:15%" placeholder="Edad" class="form-control" min="18" max="80" id="edad" name="edad" placeholder="" required>
+                                        <label for="edad" class="control-label">* Edad:</label>
+                                        <input type="number" style="width:15%" class="form-control" min="18" max="80" id="edad" name="edad" placeholder="" required>
                                     </div>        
                                     
                                     <div class="form-group"> 
-                                        <label for="estado" class="control-label">* Estado</label>
-                                        <input type="text" class="form-control" placeholder="Ingresa tu estado" id="estado" name="estado" placeholder="" required>
+                                        <label for="estado" class="control-label">* Estado:</label>
+                                        <input type="text" class="form-control" id="estado" name="estado" placeholder="" required>
                                     </div>  
         
                                     <div class="form-group"> 
-                                        <label for="municipio" class="control-label">* Municipio</label>
-                                        <input type="text" class="form-control" id="municipio" placeholder="Ingresa tu municipio" name="municipio" placeholder="" required>
+                                        <label for="municipio" class="control-label">* Municipio:</label>
+                                        <input type="text" class="form-control" id="municipio" name="municipio" placeholder="" required>
                                     </div> 
         
                                     <div class="form-group"> 
-                                        <label for="colonia" class="control-label">* Colonia</label>
-                                        <input type="text" class="form-control"  placeholder="Ingresa tu colonia" id="colonia" name="colonia" placeholder="" required>
+                                        <label for="colonia" class="control-label">* Colonia:</label>
+                                        <input type="text" class="form-control" id="colonia" name="colonia" placeholder="" required>
                                     </div> 
                                                             
                                     
                                     <div class="form-group"> 
-                                        <label for="ocupacion" class="control-label">* Ocupación</label>
-                                        <input type="text" class="form-control" placeholder="Ingresa tu ocupación" id="ocupacion" name="ocupacion" placeholder="" required>
+                                        <label for="ocupacion" class="control-label">* Ocupación:</label>
+                                        <input type="text" class="form-control" id="ocupacion" name="ocupacion" placeholder="" required>
                                     </div>  
                                     
                                     <div class="form-group"> 
-                                        <label for="nacionalidad" class="control-label">* Nacionalidad</label>
-                                        <input type="text" class="form-control" id="nacionalidad" placeholder="Ingresa tu nacionalidad" name="nacionalidad" placeholder="" required>
+                                        <label for="nacionalidad" class="control-label">* Nacionalidad:</label>
+                                        <input type="text" class="form-control" id="nacionalidad" name="nacionalidad" placeholder="" required>
                                     </div>  
         
                                     <br>
@@ -255,7 +255,7 @@
                                 <div class="form-group" style="border-style:ridge; border-color: black;padding:20px; border-radius:10px;">
                                 
                                     <legend class="text-center">Categoría: Producto Innovador</legend>
-                                
+                                    <p>Las imágenes deben tener las dimensiones 1200 x 448</p>
                                     <!--<div class="form-group">
                                         <label style="font-weight:900" for="">Categoría: Producto Innovador</label>
                                     </div>-->
@@ -269,7 +269,7 @@
         
                                     <div class="form-group"> 
                                         <label for="cadena1" class="control-label">Cadena de texto generadora de la imagen:</label>
-                                        <textarea style="height:100px" class="form-control" placeholder="Ingresa la cadena de texto generadora de la imagen" id="cadena1" name="cadena1" placeholder=""></textarea>
+                                        <textarea style="height:100px" class="form-control" id="cadena1" name="cadena1" placeholder=""></textarea>
                                     </div> 
                                     <br>
                                     <div class="form-group">
@@ -280,7 +280,7 @@
         
                                     <div class="form-group"> 
                                         <label for="cadena2" class="control-label">Cadena de texto generadora de la imagen:</label>
-                                        <textarea style="height:100px" class="form-control" placeholder="Ingresa la cadena de texto generadora de la imagen" id="cadena2" name="cadena2" placeholder=""></textarea>
+                                        <textarea style="height:100px" class="form-control" id="cadena2" name="cadena2" placeholder=""></textarea>
                                     </div> 
             
             
@@ -290,7 +290,9 @@
                                 <div class="form-group" style="border-style:ridge; border-color: black;padding:20px; border-radius:10px;">
                                     
                                     <legend class="text-center">Categoría: Interacción Ciber-Humana</legend>
-        
+                                    <p>Las imágenes deben tener las dimensiones 1200 x 448</p>
+
+                                    <br>
                                     <div class="form-group">
                                         <label for="imagen3">Imagen generada por IA (JPG)</label>
                                         <input type="file" class="form-control-file" id="imagen3" name="imagen3" accept="image/jpeg">
@@ -299,7 +301,7 @@
         
                                     <div class="form-group"> 
                                         <label for="cadena3" class="control-label">Cadena de texto generadora de la imagen:</label>
-                                        <textarea style="height:100px" placeholder="Ingresa la cadena de texto generadora de la imagen" class="form-control" id="cadena3" name="cadena3" placeholder=""></textarea>
+                                        <textarea style="height:100px" class="form-control" id="cadena3" name="cadena3" placeholder=""></textarea>
                                     </div> 
                                     <br>
                                     <div class="form-group">
@@ -310,7 +312,7 @@
         
                                     <div class="form-group"> 
                                         <label for="cadena4" class="control-label">Cadena de texto generadora de la imagen:</label>
-                                        <textarea placeholder="Ingresa la cadena de texto generadora de la imagen" style="height:100px" class="form-control" id="cadena4" name="cadena4" placeholder=""></textarea>
+                                        <textarea style="height:100px" class="form-control" id="cadena4" name="cadena4" placeholder=""></textarea>
                                     </div>  
         
                                     </div>
@@ -418,8 +420,45 @@
 
 </body></html>
 
+<script>
+    $(document).ready(function(){
+        $('#imagen1').change(function(){
+            validaTam();
+        });
+        $('#imagen2').change(function(){
+            validaTam();
+        });
+        $('#imagen3').change(function(){
+            validaTam();
+        });
+        $('#imagen4').change(function(){
+            validaTam();
+        });
+    });
+</script>
 
+<script>
+    function validaTam(){
 
+        for(let i = 1; i <= 4; i++ ){
+            var input = document.getElementById('imagen'+i+'');
+
+            if (input.files && input.files[0]) {
+                var imagen = new Image();
+                imagen.src = URL.createObjectURL(input.files[0]);
+                imagen.onload = function() {
+                    var width = imagen.width;
+                    var height = imagen.height;
+                    if(width != 1200 || height != 448){
+                        alert('La imagen no es válida, debe tener las dimensiones 1200 x 448 px.\nLas dimensiones de tu imagen son: \n'+'Ancho: ' + width + 'px\n' + 'Alto: ' + height + 'px');
+                        document.getElementById('imagen'+i+'').value = "";
+                    }
+                };
+            }
+        }
+        
+    }
+</script>
 
 <script>
     function validaImagenes(){
@@ -467,15 +506,16 @@
                     
                     if(fileImg1){
                         if (fileImg1.size > maxSizeImg) {
-                            alert("El archivo de imagen 1 en la categoría: Producto innovador. Excede el tamaño máximo permitido de 5MB.");
+                            alert("El archivo de la imagen 1 en la categoría: Producto innovador. Excede el tamaño máximo permitido de 5MB.");
                             archivoImg1.value = '';
                             validaArchivos++;
                         }
                     }
+                    
 
                     if(fileImg2){
                         if (fileImg2.size > maxSizeImg) {
-                            alert("El archivo de imagen 2 en la categoría: Producto innovador. Excede el tamaño máximo permitido de 5MB.");
+                            alert("El archivo de la imagen 2 en la categoría: Producto innovador. Excede el tamaño máximo permitido de 5MB.");
                             archivoImg2.value = '';
                             validaArchivos++;
                         }
@@ -483,7 +523,7 @@
 
                     if(fileImg3){
                         if (fileImg3.size > maxSizeImg) {
-                            alert("El archivo de imagen 1 en la categoría: Interacción Ciber-Humana. Excede el tamaño máximo permitido de 5MB.");
+                            alert("El archivo de la imagen 1 en la categoría: Interacción Ciber-Humana. Excede el tamaño máximo permitido de 5MB.");
                             archivoImg3.value = '';
                             validaArchivos++;
                         }
@@ -491,7 +531,7 @@
 
                     if(fileImg4){
                         if (fileImg4.size > maxSizeImg) {
-                            alert("El archivo de imagen 2 en la categoría: Producto innovador. Excede el tamaño máximo permitido de 5MB.");
+                            alert("El archivo de la imagen 2 en la categoría: Producto innovador. Excede el tamaño máximo permitido de 5MB.");
                             archivoImg4.value = '';
                             validaArchivos++;
                         }
