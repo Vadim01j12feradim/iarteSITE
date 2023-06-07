@@ -193,7 +193,7 @@
                                 
                                     <div class="form-group"> 
                                         <label for="edad" class="control-label">* Edad</label>
-                                        <input type="number" style="width:15%" placeholder="Ingresa tu edad" class="form-control" min="18" max="80" id="edad" name="edad" placeholder="" required>
+                                        <input type="number" style="width:15%" placeholder="Edad" class="form-control" min="18" max="80" id="edad" name="edad" placeholder="" required>
                                     </div>        
                                     
                                     <div class="form-group"> 
