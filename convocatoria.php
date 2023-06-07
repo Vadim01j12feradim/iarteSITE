@@ -178,7 +178,7 @@
                                     <label for="nombre" class="control-label">Los campos marcados con * son OBLIGATORIOS </label>
                                     <div class="form-group"> 
                                         <label for="nombre" class="control-label">* Nombre completo:</label>
-                                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" required>
+                                        <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo" name="nombre" placeholder="" required>
                                     </div>    
                                 
                                     <div class="form-group"> 
