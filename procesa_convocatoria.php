@@ -19,7 +19,7 @@
     $tmpComprobante = $_FILES['comprobante']['tmp_name'];
 
     if (isset($_FILES['imagen1']) && $_FILES['imagen1']['error'] === UPLOAD_ERR_OK) {
-        $imagen1 = $telefono.$_FILES['imagen1']['name'];
+        $imagen1 = 'im1'.$telefono.$_FILES['imagen1']['name'];
         $tmpImagen1 = $_FILES['imagen1']['tmp_name'];
         move_uploaded_file($tmpImagen1,'imagenes'.'/'.$imagen1);
         $rutaI1 = 'imagenes/'.$imagen1;
@@ -31,7 +31,7 @@
 
 
     if (isset($_FILES['imagen2']) && $_FILES['imagen2']['error'] === UPLOAD_ERR_OK) {
-        $imagen2 = $telefono.$_FILES['imagen2']['name'];
+        $imagen2 = 'im2'.$telefono.$_FILES['imagen2']['name'];
         $tmpImagen2 = $_FILES['imagen2']['tmp_name'];
         move_uploaded_file($tmpImagen2,'imagenes'.'/'.$imagen2);
         $rutaI2 = 'imagenes/'.$imagen2;
@@ -42,7 +42,7 @@
     }
 
     if (isset($_FILES['imagen3']) && $_FILES['imagen3']['error'] === UPLOAD_ERR_OK) {
-        $imagen3 = $telefono.$_FILES['imagen3']['name'];
+        $imagen3 = 'im3'.$telefono.$_FILES['imagen3']['name'];
         $tmpImagen3 = $_FILES['imagen3']['tmp_name'];
         move_uploaded_file($tmpImagen3,'imagenes'.'/'.$imagen3);
         $rutaI3 = 'imagenes/'.$imagen3;
@@ -53,7 +53,7 @@
     }
 
     if (isset($_FILES['imagen4']) && $_FILES['imagen4']['error'] === UPLOAD_ERR_OK) {
-        $imagen4 = $telefono.$_FILES['imagen4']['name'];
+        $imagen4 = 'im4'.$telefono.$_FILES['imagen4']['name'];
         $tmpImagen4 = $_FILES['imagen4']['tmp_name'];
         move_uploaded_file($tmpImagen4,'imagenes'.'/'.$imagen4);
         $rutaI4 = 'imagenes/'.$imagen4;
@@ -92,7 +92,7 @@
     $rutaCom = 'archivos/'.$comprobante;
     $rutaMan = 'archivos/'.$manifiesto;
 
-    $query = "INSERT INTO registro(nombre, telefono, correo, edad, estado, municipio, colonia, ocupacion, ncionalidad, identificacion,comprobante, imagen1, cadena1, imagen2, cadena2, imagen3, cadena3, imagen4, cadena4, manifiesto) VALUES('$nombre','$telefono','$correo',$edad,'$estado','$municipio','$colonia','$ocupacion','$nacionalidad','$rutaIde','$rutaCom','$rutaI1','$cadena1','$rutaI2','$cadena2','$rutaI3','$cadena3','$rutaI4','$cadena4','$rutaMan')";
+    $query = "INSERT INTO registro(nombre, telefono, correo, edad, estado, municipio, colonia, ocupacion, nacionalidad, identificacion,comprobante, imagen1, cadena1, imagen2, cadena2, imagen3, cadena3, imagen4, cadena4, manifiesto) VALUES('$nombre','$telefono','$correo',$edad,'$estado','$municipio','$colonia','$ocupacion','$nacionalidad','$rutaIde','$rutaCom','$rutaI1','$cadena1','$rutaI2','$cadena2','$rutaI3','$cadena3','$rutaI4','$cadena4','$rutaMan')";
 
     $conexion = conectar();
 
