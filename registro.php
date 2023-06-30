@@ -119,12 +119,12 @@
 							<li class="active" style="display: inline-block;"><a href="./"><i class="fas fa-home"></i></a></li>
 
 	                        <li class="dropdown  active" style="display: inline-block;">
-	                            <a href="./registro.php" >Registro</a>
+	                            <a href="">Registro <img style="transform: rotate(180deg); margin-left: 4px;" width="14px" src="./images/dropDown.png" alt="" srcset=""></a>
 	                            <ul class="dropdown-menu">
-	                                <li><a href="./registro.php">Registro 1er iArte 2023 </a></li>
+	                                <li><a href="">Registro 1er iArte 2023 </a></li>
 	                            </ul>
 	                        </li> 
-							<li style="display: inline-block;"><a href="#">Preguntas frecuentes<img style="transform: rotate(180deg); margin-left: 4px;" width="14px" src="./images/dropDown.png" alt="" srcset=""></a></li>
+							<li style="display: inline-block;"><a href="./dudas.html">Preguntas frecuentes</a></li>
 
 							<!-- <li style="display: inline-block;"><a href="prensa.php">PRENSA</a></li> -->
 							<li style="display: inline-block;"><a  href="http://www.cucei.udg.mx/es/directorio/Departamento-de-Innovaci%C3%B3n-Basada-en-la-Informaci%C3%B3n-y-el-Conocimiento">Contacto</a></li>
@@ -158,111 +158,175 @@
 		<!-- BANNER -->
 		<div class="preWrapper bg_header">
 			<div class="wrapper clearfix">
-				<img class="img-responsive" src="./images/questions.png" alt="Convocatoria bienal Jalisco">
+				<img class="img-responsive" src="./images/font.png" alt="Convocatoria bienal Jalisco">
 			</div>
-			<div class="breadcrumbs">INICIO &gt; Preguntas frecuentes</div>
+			<!--<div class="breadcrumbs">INICIO &gt; Convocatoria</div>-->
 		</div>
 		<!-- END BANNER -->
 
 		<div id="info-principal">
-			<div class="row">
-				<div class="col-sm-6 monroy">
-					<div class="division"></div>
-					<h1 class="border-amarillo">Preguntas frecuentes</h1>
+            <div class="container" style="width:80%;margin-top:30px;" >
+                <?php include('conexion.php'); ?>
+                        <div class="well well-sm" >
+                            <form method="POST" action="procesa_registro.php" enctype="multipart/form-data" id="form-registro"  >
+                                <fieldset >
+                                <!--********DATOS********-->
+                                <div class="form-group" style="border-style:ridge; border-color: black;padding:20px; border-radius:10px;">
+        
+                                    <legend class="text-center">Registro</legend>
+                                
+                                    <label for="nombre" class="control-label">Los campos marcados con * son OBLIGATORIOS </label>
+                                    <div class="form-group"> 
+                                        <label for="nombre" class="control-label">* Nombre completo:</label>
+                                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" required>
+                                    </div>    
+                                
+                                    <div class="form-group"> 
+                                        <label for="telefono" class="control-label">* Teléfono:</label>
+                                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="" required>
+                                    </div>                    
+                                                            
+                                    <div class="form-group"> 
+                                        <label for="correo" class="control-label">* Correo:</label>
+                                        <input type="email" class="form-control" id="correo" name="correo" placeholder="" required>
+                                    </div>    
+                                
+                                    <div class="form-group"> 
+                                        <label for="edad" class="control-label">* Edad:</label>
+                                        <input type="number" style="width:15%" class="form-control" min="18" max="80" id="edad" name="edad" placeholder="" required>
+                                    </div>        
+                                    
+                                    <div class="form-group"> 
+                                        <label for="estado" class="control-label">* Estado:</label>
+                                        <input type="text" class="form-control" id="estado" name="estado" placeholder="" required>
+                                    </div>  
+        
+                                    <div class="form-group"> 
+                                        <label for="municipio" class="control-label">* Municipio:</label>
+                                        <input type="text" class="form-control" id="municipio" name="municipio" placeholder="" required>
+                                    </div> 
+        
+                                    <div class="form-group"> 
+                                        <label for="colonia" class="control-label">* Colonia:</label>
+                                        <input type="text" class="form-control" id="colonia" name="colonia" placeholder="" required>
+                                    </div> 
+                                                            
+                                    
+                                    <div class="form-group"> 
+                                        <label for="ocupacion" class="control-label">* Ocupación:</label>
+                                        <input type="text" class="form-control" id="ocupacion" name="ocupacion" placeholder="" required>
+                                    </div>  
+                                    
+                                    <div class="form-group"> 
+                                        <label for="nacionalidad" class="control-label">* Nacionalidad:</label>
+                                        <input type="text" class="form-control" id="nacionalidad" name="nacionalidad" placeholder="" required>
+                                    </div>  
+        
+                                    <br>
+        
+                                </div>  
+        
+                                <!--*******DOCUMENTOS******-->
+                                <br>
+                                <div class="form-group" style="border-style:ridge; border-color: black;padding:20px; border-radius:10px;">
+                                
+                                    <legend class="text-center">Documentos</legend>
+        
+                                    <div class="form-group">
+                                        <label for="identificacion">* Identificación oficial vigente (PDF)</label>
+                                        <input type="file" class="form-control-file" id="identificacion" name="identificacion" accept="application/pdf" required>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="comprobante">* Comprobante de domicilio reciente (PDF)</label>
+                                        <input type="file" class="form-control-file" id="comprobante" name="comprobante" accept="application/pdf" required>
+                                    </div>
+                                    <br>
+        
+                                    <div class="form-group">
+                                        <label for="manifiesto">* Manifiesto firmado (PDF)</label>
+                                        <input type="file" class="form-control-file" id="manifiesto" name="manifiesto" accept="application/pdf" required>
+                                    </div>
+                                    <br>
+                                
+                                </div>
+                                <br>
+                                <!--*******Imágenes Producto Innovador******-->
+                                <div class="form-group" style="border-style:ridge; border-color: black;padding:20px; border-radius:10px;">
+                                
+                                    <legend class="text-center">Categoría: Producto Innovador</legend>
+                                    <p>Las imágenes deben tener las dimensiones 1200 x 448</p>
+                                    <!--<div class="form-group">
+                                        <label style="font-weight:900" for="">Categoría: Producto Innovador</label>
+                                    </div>-->
+                                    <br>
+        
+                                    <div class="form-group">
+                                        <label for="imagen1">Imagen generada por IA (JPG)</label>
+                                        <input type="file" class="form-control-file" id="imagen1" name="imagen1" accept="image/jpeg">
+                                    </div>
+                                    <br>
+        
+                                    <div class="form-group"> 
+                                        <label for="cadena1" class="control-label">Cadena de texto generadora de la imagen:</label>
+                                        <textarea style="height:100px" class="form-control" id="cadena1" name="cadena1" placeholder=""></textarea>
+                                    </div> 
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="imagen2">Imagen generada por IA (JPG)</label>
+                                        <input type="file" class="form-control-file" id="imagen2" name="imagen2" accept="image/jpeg">
+                                    </div>
+                                    <br>
+        
+                                    <div class="form-group"> 
+                                        <label for="cadena2" class="control-label">Cadena de texto generadora de la imagen:</label>
+                                        <textarea style="height:100px" class="form-control" id="cadena2" name="cadena2" placeholder=""></textarea>
+                                    </div> 
+            
+            
+                                </div>
+                                <br>
+                                <!--*******Imágenes Producto Innovador******-->
+                                <div class="form-group" style="border-style:ridge; border-color: black;padding:20px; border-radius:10px;">
+                                    
+                                    <legend class="text-center">Categoría: Interacción Ciber-Humana</legend>
+                                    <p>Las imágenes deben tener las dimensiones 1200 x 448</p>
 
-					<div class="txt-convo">
-						<p class="pregunta">
-							1. ¿Es necesario ingresar TODOS los datos en la solicitud?
-						</p>
-						<p class="respuesta">
-							R. Sí es necesario, de lo contrario el registro estará incompleto y tu solicitud quedará fuera de participación.
-						</p>
-							
-						<p class="pregunta">
-							2. ¿Con cuántas imágenes puedo participar?
-						</p>
-						<p class="respuesta">
-							R. Los participantes pueden inscribir un
-							máximo de dos imágenes en las dos categorías.
-						</p>
-						<p class="pregunta">
-							3. ¿En qué tipo de formato debo adjuntar la imagen de la obra? 
-						</p>
-						<p class="respuesta">
-							R. El formato deberá ser un archivo digital en extensión .jpg o .png, tamaño del archivo no mayor a 5 Mb.
-						</p>
-						<p class="pregunta">
-							4. ¿Qué tipo de temática se pueden abordar en las imágenes? 
-						</p>
-						<p class="respuesta">
-							R. 
-							<ol type="a"> 
-								<li style="text-align: initial;">
-							Producto innovador, descripción de productos que
-							no existan en el mercado actual con el objetivo de
-							mostrar habilidades en la descripción de manera
-							atractiva y creativa.
-								</li>
-								<li style="text-align: initial;"> 
-								Interacción ciber-humana, descripción de
-							actividades que involucren este tipo de interacción en
-							imágenes artísticas y expresivas.
-								 </li>
-								</ol>
-						</p>
-
-						<ul class="dudas">
-							<li>
-								<span class="amarillo">Para dudas generales sobre la convocatoria:</span>
-								
-							</li>
-							<li>
-								<a href="mailto:contacto@bienaljamonroy.mx">dibic@cucei.udg.mx </a>
-
-							</li>
-						</ul>
-					</div>
-
-
-
-				</div>
-				<div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1">
-					<div class="descargas">
-						<div class="t-descargas">
-							<h4>Descargas</h4>
-						</div>
-						<h3><a href="./files/Convocatoria_1er_iArte2023.pdf" target="_blank">Convocatoria_1er_iArte2023</a></h3>
-						<p class="pdf"><a href="pdf/Convocatoria_VI_Bienal2022.pdf" target="_blank">PDF</a></p>
-						<ul>
-							<li><a href="./#uno">¿Quién puede participar?</a></li>
-							<li><a href="./#dos">¿Cómo participar?</a></li>
-							<li><a href="./#tres">Selección de las imágenes</a></li>
-							<li><a href="./#cuatro">Premiación</a></li>
-						</ul>
-						<!-- <hr class="dotted"> -->
-						<!-- <h3><a href="pdf/Catalogo_IV_Bienal_UdG_completo.pdf" target="_blank">CATÁLOGO DE OBRAS SELECCIONADAS</a></h3>
-						<p class="pdf"><a href="pdf/Catalogo_IV_Bienal_UdG_completo.pdf" target="_blank">PDF</a></p>
-						<ul>
-							<li><a href="pdf/Catalogo_IIBienalJAM.pdf" target="_blank">Obras seleccionadas en la II Bienal J.A. Monroy 2014</a></li>
-							<li><a href="pdf/Catalogo_IIIBienalJAM.pdf" target="_blank">Obras seleccionadas en la III Bienal J.A. Monroy 2016</a></li>
-							<li><a href="pdf/Catalogo_IV_Bienal_UdG_completo.pdf" target="_blank">Obras seleccionadas en la IV Bienal J.A. Monroy 2018</a></li>
-							
-						</ul> -->
-					</div>
-					<div class="row botones-inicio" style="margin-bottom:50px">
-						<div class="col-sm-12">
-							<!--div class="input-group">
-						      	<span class="input-group-btn">
-							        	<a href="registro.php" class="btn btn-morado" ><i class="icon-plus"></i></a>
-						      	</span>
-						      	<a href="registro.php" class="btn btn-gris">Registro</a>
-						    </div-->
-						</div>
-					</div>
-					
-					
-				</div>
-			</div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="imagen3">Imagen generada por IA (JPG)</label>
+                                        <input type="file" class="form-control-file" id="imagen3" name="imagen3" accept="image/jpeg">
+                                    </div>
+                                    <br>
+        
+                                    <div class="form-group"> 
+                                        <label for="cadena3" class="control-label">Cadena de texto generadora de la imagen:</label>
+                                        <textarea style="height:100px" class="form-control" id="cadena3" name="cadena3" placeholder=""></textarea>
+                                    </div> 
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="imagen4">Imagen generada por IA (JPG)</label>
+                                        <input type="file" class="form-control-file" id="imagen4" name="imagen4" accept="image/jpeg">
+                                    </div>
+                                    <br>
+        
+                                    <div class="form-group"> 
+                                        <label for="cadena4" class="control-label">Cadena de texto generadora de la imagen:</label>
+                                        <textarea style="height:100px" class="form-control" id="cadena4" name="cadena4" placeholder=""></textarea>
+                                    </div>  
+        
+                                    </div>
+                                    <br>    
+        
+                                    <div class="form-group" style="text-align:right"> 
+                                        <button type="button" class="btn btn-primary" onclick="validaImagenes();">Enviar</button>
+                                    </div>     
+                                
+                                </fieldset>
+                            </form>
+                        </div>
+                   
+            </div>
 			
 		</div>
 	</div>
@@ -290,7 +354,8 @@
 			</div>
 			<div class="row img-f text-center">
 				<div class="col-md-2 col-sm-12">
-					<img src="./images/Orange.png" width="150px" alt="" srcset="">
+                    
+                    <img src="./images/Orange.png" width="150px" alt="" srcset="">
 					<!-- <a style="color: rgb(0, 0, 0); font-size: 90px;  font-family:cursive; font-weight: bold;">iArte</a> -->
 				</div>
 				<!-- <div class="col-md-2 col-md-offset-1 col-sm-12">
@@ -354,3 +419,205 @@
 
 
 </body></html>
+
+<script>
+    $(document).ready(function(){
+        $('#imagen1').change(function(){
+            validaTam();
+        });
+        $('#imagen2').change(function(){
+            validaTam();
+        });
+        $('#imagen3').change(function(){
+            validaTam();
+        });
+        $('#imagen4').change(function(){
+            validaTam();
+        });
+    });
+</script>
+
+<script>
+    function validaTam(){
+
+        for(let i = 1; i <= 4; i++ ){
+            var input = document.getElementById('imagen'+i+'');
+
+            if (input.files && input.files[0]) {
+                var imagen = new Image();
+                imagen.src = URL.createObjectURL(input.files[0]);
+                imagen.onload = function() {
+                    var width = imagen.width;
+                    var height = imagen.height;
+                    if(width != 1200 || height != 448){
+                        alert('La imagen no es válida, debe tener las dimensiones 1200 x 448 px.\nLas dimensiones de tu imagen son: \n'+'Ancho: ' + width + 'px\n' + 'Alto: ' + height + 'px');
+                        document.getElementById('imagen'+i+'').value = "";
+                    }
+                };
+            }
+        }
+        
+    }
+</script>
+
+<script>
+    function validaImagenes(){
+        var okey = 0;
+        var validaArchivos = 0;
+        for(let i = 1; i<=4; i++){
+            var archivo = document.getElementById("imagen"+i+"");
+  
+             if (archivo.files.length === 0) {
+                
+            }else{
+                document.getElementById("cadena"+i+"").required = true;
+                okey++;
+            }
+        }
+        if(okey == 0){
+            alert("Debes subir al menos una imagen");
+        }else{
+
+            var formulario = document.getElementById("form-registro");
+  
+            if (formulario.checkValidity()){
+
+                const archivoIdentificacion = document.getElementById('identificacion');
+                const archivoComprobante = document.getElementById('comprobante');
+                const archivoManifiesto = document.getElementById('manifiesto');
+
+                const fileIdentificacion = archivoIdentificacion.files[0];
+                const fileComprobante = archivoComprobante.files[0];
+                const fileManifiesto = archivoManifiesto.files[0]; 
+
+                const archivoImg1 = document.getElementById('imagen1');
+                const archivoImg2 = document.getElementById('imagen2');
+                const archivoImg3 = document.getElementById('imagen3');
+                const archivoImg4 = document.getElementById('imagen4');
+
+                const fileImg1 = archivoImg1.files[0];
+                const fileImg2 = archivoImg2.files[0];
+                const fileImg3 = archivoImg3.files[0];
+                const fileImg4 = archivoImg4.files[0];
+
+
+                const maxSizePdf = 1024 * 1024; // 1MB
+                const maxSizeImg = 1024 * 1024 * 5; // 5MB
+                    
+                    if(fileImg1){
+                        if (fileImg1.size > maxSizeImg) {
+                            alert("El archivo de la imagen 1 en la categoría: Producto innovador. Excede el tamaño máximo permitido de 5MB.");
+                            archivoImg1.value = '';
+                            validaArchivos++;
+                        }
+                    }
+                    
+
+                    if(fileImg2){
+                        if (fileImg2.size > maxSizeImg) {
+                            alert("El archivo de la imagen 2 en la categoría: Producto innovador. Excede el tamaño máximo permitido de 5MB.");
+                            archivoImg2.value = '';
+                            validaArchivos++;
+                        }
+                    }
+
+                    if(fileImg3){
+                        if (fileImg3.size > maxSizeImg) {
+                            alert("El archivo de la imagen 1 en la categoría: Interacción Ciber-Humana. Excede el tamaño máximo permitido de 5MB.");
+                            archivoImg3.value = '';
+                            validaArchivos++;
+                        }
+                    }
+
+                    if(fileImg4){
+                        if (fileImg4.size > maxSizeImg) {
+                            alert("El archivo de la imagen 2 en la categoría: Producto innovador. Excede el tamaño máximo permitido de 5MB.");
+                            archivoImg4.value = '';
+                            validaArchivos++;
+                        }
+                    }
+
+                    if (fileIdentificacion.size > maxSizePdf) {
+                        alert("El archivo de identificación excede el tamaño máximo permitido de 1MB.");
+                        archivoIdentificacion.value = ''; // Limpiar el valor del input para permitir volver a seleccionar el archivo
+                        validaArchivos++;
+                    }
+
+                    if (fileComprobante.size > maxSizePdf) {
+                        alert("El archivo de comprobante excede el tamaño máximo permitido de 1MB.");
+                        archivoComprobante.value = ''; // Limpiar el valor del input para permitir volver a seleccionar el archivo
+                        validaArchivos++;
+                    }
+
+                    if (fileManifiesto.size > maxSizePdf) {
+                        alert("El archivo de manifiesto excede el tamaño máximo permitido de 1MB: ");
+                        archivoManifiesto.value = ''; // Limpiar el valor del input para permitir volver a seleccionar el archivo
+                        validaArchivos++;
+                    }
+                    
+                    if(validaArchivos == 0){
+                        document.getElementById("form-registro").submit();
+                    }
+
+                //
+            }else{
+                //alert("Debes llenar los campos correspondientes");
+                formulario.reportValidity();
+    
+                var campos = formulario.elements;
+                for (var i = 0; i < campos.length; i++) {
+                    if (!campos[i].validity.valid) {
+                        campos[i].focus();
+                        break;
+                    }
+                }
+            }              
+        }
+    }
+</script>
+
+<script>
+var input = document.getElementById("telefono");
+  input.addEventListener("input", function(event) {
+    var value = event.target.value;
+    var newValue = value.replace(/[^0-9]/g, "");
+    event.target.value = newValue;
+  });
+</script>
+
+
+<script>
+  var input = document.getElementById("nombre");
+  input.addEventListener("input", function(event) {
+    var value = event.target.value;
+    var newValue = value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]/g, "");
+    event.target.value = newValue;
+  });
+</script>
+
+<script>
+    var input = document.getElementById("estado");
+    input.addEventListener("input", function(event) {
+      var value = event.target.value;
+      var newValue = value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]/g, "");
+      event.target.value = newValue;
+    });
+</script>
+
+<script>
+    var input = document.getElementById("municipio");
+    input.addEventListener("input", function(event) {
+      var value = event.target.value;
+      var newValue = value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]/g, "");
+      event.target.value = newValue;
+    });
+</script>
+
+<script>
+    var input = document.getElementById("nacionalidad");
+    input.addEventListener("input", function(event) {
+      var value = event.target.value;
+      var newValue = value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]/g, "");
+      event.target.value = newValue;
+    });
+</script>
