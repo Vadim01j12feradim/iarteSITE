@@ -22,7 +22,7 @@
         $imagen1 = 'im1'.$telefono.$_FILES['imagen1']['name'];
         $tmpImagen1 = $_FILES['imagen1']['tmp_name'];
         move_uploaded_file($tmpImagen1,'imagenes'.'/'.$imagen1);
-        $rutaI1 = 'imagenes/'.$imagen1;
+        $rutaI1 = './imagenes/'.$imagen1;
         $cadena1 = $_POST['cadena1'];
     }else{
         $rutaI1 = NULL;
@@ -34,7 +34,7 @@
         $imagen2 = 'im2'.$telefono.$_FILES['imagen2']['name'];
         $tmpImagen2 = $_FILES['imagen2']['tmp_name'];
         move_uploaded_file($tmpImagen2,'imagenes'.'/'.$imagen2);
-        $rutaI2 = 'imagenes/'.$imagen2;
+        $rutaI2 = './imagenes/'.$imagen2;
         $cadena2 = $_POST['cadena2'];
     }else{
         $rutaI2 = NULL;
@@ -45,7 +45,7 @@
         $imagen3 = 'im3'.$telefono.$_FILES['imagen3']['name'];
         $tmpImagen3 = $_FILES['imagen3']['tmp_name'];
         move_uploaded_file($tmpImagen3,'imagenes'.'/'.$imagen3);
-        $rutaI3 = 'imagenes/'.$imagen3;
+        $rutaI3 = './imagenes/'.$imagen3;
         $cadena3 = $_POST['cadena3'];
     }else{
         $rutaI3 = NULL;
@@ -56,7 +56,7 @@
         $imagen4 = 'im4'.$telefono.$_FILES['imagen4']['name'];
         $tmpImagen4 = $_FILES['imagen4']['tmp_name'];
         move_uploaded_file($tmpImagen4,'imagenes'.'/'.$imagen4);
-        $rutaI4 = 'imagenes/'.$imagen4;
+        $rutaI4 = './imagenes/'.$imagen4;
         $cadena4 = $_POST['cadena4'];
     }else{
         $rutaI4 = NULL;

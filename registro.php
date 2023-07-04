@@ -183,7 +183,7 @@
                                 
                                     <div class="form-group"> 
                                         <label for="telefono" class="control-label">* Teléfono:</label>
-                                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="" required>
+                                        <input type="text" maxlength="10" class="form-control" id="telefono" name="telefono" placeholder="" required>
                                     </div>                    
                                                             
                                     <div class="form-group"> 
