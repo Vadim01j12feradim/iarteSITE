@@ -517,7 +517,17 @@
             document.getElementById("colonia").value = document.getElementById("colonia").value.trim();  
             document.getElementById("ocupacion").value = document.getElementById("ocupacion").value.trim();  
             document.getElementById("nacionalidad").value = document.getElementById("nacionalidad").value.trim();
-            document.getElementById("comentario1").value = document.getElementById("comentario1").value.trim();            
+            document.getElementById("cadena1").value = document.getElementById("cadena1").value.trim(); 
+            document.getElementById("descripcion1").value = document.getElementById("descripcion1").value.trim(); 
+            
+            document.getElementById("cadena2").value = document.getElementById("cadena2").value.trim(); 
+            document.getElementById("descripcion2").value = document.getElementById("descripcion2").value.trim();  
+
+            document.getElementById("cadena3").value = document.getElementById("cadena3").value.trim(); 
+            document.getElementById("descripcion3").value = document.getElementById("descripcion3").value.trim();  
+
+            document.getElementById("cadena4").value = document.getElementById("cadena4").value.trim(); 
+            document.getElementById("descripcion4").value = document.getElementById("descripcion4").value.trim();  
   
             if (formulario.checkValidity()){
 
