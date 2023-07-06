@@ -55,7 +55,7 @@
     }else{
         $rutaI3 = NULL;
         $cadena3 = NULL;
-        $descripcion1 = NULL;
+        $descripcion3 = NULL;
     }
 
     if (isset($_FILES['imagen4']) && $_FILES['imagen4']['error'] === UPLOAD_ERR_OK) {
