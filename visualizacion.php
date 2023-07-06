@@ -17,7 +17,7 @@
         <?php 
             include ("conexion.php"); 
             $conexion = conectar();
-            $query = "SELECT id_registro, nombre, imagen1, cadena1, imagen2, cadena2, imagen3, cadena3, imagen4, cadena4 FROM registro;";
+            $query = "SELECT id_registro, nombre, imagen1, cadena1, descripcion1, imagen2, cadena2, descripcion2, imagen3, cadena3, descripcion3, imagen4, cadena4, descripcion4 FROM registro;";
             $resultado = select($conexion, $query);
         ?>
         <!-- Inicio tabla -->
@@ -53,14 +53,18 @@
                             $cadena2 = $fila['cadena2']; 
                             $cadena3 = $fila['cadena3']; 
                             $cadena4 = $fila['cadena4']; 
+                            $descripcion1 = $fila['descripcion1'];
+                            $descripcion2 = $fila['descripcion2'];
+                            $descripcion3 = $fila['descripcion3'];
+                            $descripcion4 = $fila['descripcion4'];
 
                             echo '<tr>
                                     <td style="display:none;">'. $fila['id_registro'] .'</td>
                                     <td>'. $fila['nombre'] .'</td>
-                                    <td> <img style="height:112px; width:300px; cursor: pointer;" src="'. $img1 .'" onclick="mostrarModal(\''. $img1 .'\', \''. $cadena1 .'\')"> </td>
-                                    <td> <img style="height:112px; width:300px; cursor: pointer;" src="'. $img2 .'" onclick="mostrarModal(\''. $img2 .'\', \''. $cadena2 .'\')"> </td>
-                                    <td> <img style="height:112px; width:300px; cursor: pointer;" src="'. $img3 .'" onclick="mostrarModal(\''. $img3 .'\', \''. $cadena3 .'\')"> </td>
-                                    <td> <img style="height:112px; width:300px; cursor: pointer;" src="'. $img4 .'" onclick="mostrarModal(\''. $img4 .'\', \''. $cadena4 .'\')"> </td>
+                                    <td> <img style="height:112px; width:300px; cursor: pointer;" src="'. $img1 .'" onclick="mostrarModal(\''. $img1 .'\', \''. $cadena1 .'\', \''. $descripcion1 .'\')"> </td>
+                                    <td> <img style="height:112px; width:300px; cursor: pointer;" src="'. $img2 .'" onclick="mostrarModal(\''. $img2 .'\', \''. $cadena2 .'\', \''. $descripcion2 .'\')"> </td>
+                                    <td> <img style="height:112px; width:300px; cursor: pointer;" src="'. $img3 .'" onclick="mostrarModal(\''. $img3 .'\', \''. $cadena3 .'\', \''. $descripcion3 .'\')"> </td>
+                                    <td> <img style="height:112px; width:300px; cursor: pointer;" src="'. $img4 .'" onclick="mostrarModal(\''. $img4 .'\', \''. $cadena4 .'\', \''. $descripcion4 .'\')"> </td>
                                 </tr>';
                         }
                     ?>     
@@ -85,7 +89,11 @@
                 <div class="modal-body">
                     <img id="imagenModalImg" style="max-width: 100%; height: auto;" src="" alt="Imagen">
                     <div class="mt-3">
-                        <label for="descripcionModal" class="form-label">Prompt generador de la imagen:</label>
+                        <label for="promptModal" class="form-label">Prompt generador de la imagen:</label>
+                        <textarea id="promptModal" class="form-control" rows="4" readonly></textarea>
+                    </div>
+                    <div class="mt-3">
+                        <label for="descripcionModal" class="form-label">Descripción de la imagen:</label>
                         <textarea id="descripcionModal" class="form-control" rows="4" readonly></textarea>
                     </div>
                 </div>
@@ -98,8 +106,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     
     <script>
-        function mostrarModal(imagenSrc, descripcion) {
+        function mostrarModal(imagenSrc, prompt, descripcion) {
             $('#imagenModalImg').attr('src', imagenSrc);
+            $('#promptModal').val(prompt);
             $('#descripcionModal').val(descripcion);
             $('#imagenModal').modal('show');
         }
