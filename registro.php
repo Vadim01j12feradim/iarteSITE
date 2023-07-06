@@ -272,6 +272,14 @@
                                         <textarea style="height:100px" class="form-control" id="cadena1" name="cadena1" placeholder=""></textarea>
                                     </div> 
                                     <br>
+
+                                    <div class="form-group"> 
+                                        <label for="descripcion1" class="control-label">Describe tu imagen:</label>
+                                        <textarea style="height:100px" class="form-control" id="descripcion1" name="descripcion1" placeholder=""></textarea>
+                                    </div> 
+                                    <br>
+
+
                                     <div class="form-group">
                                         <label for="imagen2">Imagen generada por IA (JPG)</label>
                                         <input type="file" class="form-control-file" id="imagen2" name="imagen2" accept="image/jpeg">
@@ -282,6 +290,12 @@
                                         <label for="cadena2" class="control-label">Cadena de texto generadora de la imagen:</label>
                                         <textarea style="height:100px" class="form-control" id="cadena2" name="cadena2" placeholder=""></textarea>
                                     </div> 
+
+                                    <div class="form-group"> 
+                                        <label for="descripcion2" class="control-label">Describe tu imagen:</label>
+                                        <textarea style="height:100px" class="form-control" id="descripcion2" name="descripcion2" placeholder=""></textarea>
+                                    </div> 
+                                    <br>
             
             
                                 </div>
@@ -304,6 +318,15 @@
                                         <textarea style="height:100px" class="form-control" id="cadena3" name="cadena3" placeholder=""></textarea>
                                     </div> 
                                     <br>
+
+                                    
+                                    <div class="form-group"> 
+                                        <label for="descripcion3" class="control-label">Describe tu imagen:</label>
+                                        <textarea style="height:100px" class="form-control" id="descripcion3" name="descripcion3" placeholder=""></textarea>
+                                    </div> 
+                                    <br>
+
+
                                     <div class="form-group">
                                         <label for="imagen4">Imagen generada por IA (JPG)</label>
                                         <input type="file" class="form-control-file" id="imagen4" name="imagen4" accept="image/jpeg">
@@ -314,6 +337,12 @@
                                         <label for="cadena4" class="control-label">Cadena de texto generadora de la imagen:</label>
                                         <textarea style="height:100px" class="form-control" id="cadena4" name="cadena4" placeholder=""></textarea>
                                     </div>  
+
+                                    <div class="form-group"> 
+                                        <label for="descripcion4" class="control-label">Describe tu imagen:</label>
+                                        <textarea style="height:100px" class="form-control" id="descripcion4" name="descripcion4" placeholder=""></textarea>
+                                    </div> 
+                                    <br>
         
                                     </div>
                                     <br>    
@@ -471,6 +500,7 @@
                 
             }else{
                 document.getElementById("cadena"+i+"").required = true;
+                document.getElementById("descripcion"+i+"").required = true;
                 okey++;
             }
         }
@@ -479,6 +509,15 @@
         }else{
 
             var formulario = document.getElementById("form-registro");
+            //var campos = formulario.elements;
+            document.getElementById("nombre").value = document.getElementById("nombre").value.trim();  
+            document.getElementById("correo").value = document.getElementById("correo").value.trim();  
+            document.getElementById("estado").value = document.getElementById("estado").value.trim();  
+            document.getElementById("municipio").value = document.getElementById("municipio").value.trim();  
+            document.getElementById("colonia").value = document.getElementById("colonia").value.trim();  
+            document.getElementById("ocupacion").value = document.getElementById("ocupacion").value.trim();  
+            document.getElementById("nacionalidad").value = document.getElementById("nacionalidad").value.trim();
+            document.getElementById("comentario1").value = document.getElementById("comentario1").value.trim();            
   
             if (formulario.checkValidity()){
 
@@ -565,7 +604,9 @@
                 formulario.reportValidity();
     
                 var campos = formulario.elements;
+                
                 for (var i = 0; i < campos.length; i++) {
+                   
                     if (!campos[i].validity.valid) {
                         campos[i].focus();
                         break;
