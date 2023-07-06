@@ -24,9 +24,11 @@
         move_uploaded_file($tmpImagen1,'img'.'/'.$imagen1);
         $rutaI1 = './img/'.$imagen1;
         $cadena1 = $_POST['cadena1'];
+        $descripcion1 = $_POST['descripcion1'];
     }else{
         $rutaI1 = NULL;
         $cadena1 = NULL;
+        $descripcion1 = NULL;
     }
 
 
@@ -36,9 +38,11 @@
         move_uploaded_file($tmpImagen2,'img'.'/'.$imagen2);
         $rutaI2 = './img/'.$imagen2;
         $cadena2 = $_POST['cadena2'];
+        $descripcion2 = $_POST['descripcion2'];
     }else{
         $rutaI2 = NULL;
         $cadena2 = NULL;
+        $descripcion2 = NULL;
     }
 
     if (isset($_FILES['imagen3']) && $_FILES['imagen3']['error'] === UPLOAD_ERR_OK) {
@@ -47,9 +51,11 @@
         move_uploaded_file($tmpImagen3,'img'.'/'.$imagen3);
         $rutaI3 = './img/'.$imagen3;
         $cadena3 = $_POST['cadena3'];
+        $descripcion3 = $_POST['descripcion3'];
     }else{
         $rutaI3 = NULL;
         $cadena3 = NULL;
+        $descripcion1 = NULL;
     }
 
     if (isset($_FILES['imagen4']) && $_FILES['imagen4']['error'] === UPLOAD_ERR_OK) {
@@ -58,9 +64,11 @@
         move_uploaded_file($tmpImagen4,'img'.'/'.$imagen4);
         $rutaI4 = './img/'.$imagen4;
         $cadena4 = $_POST['cadena4'];
+        $descripcion4 = $_POST['descripcion4'];
     }else{
         $rutaI4 = NULL;
         $cadena4 = NULL;
+        $descripcion4 = NULL;
     }
 
     
@@ -92,7 +100,7 @@
     $rutaCom = './files/'.$comprobante;
     $rutaMan = './files/'.$manifiesto;
 
-    $query = "INSERT INTO registro(nombre, telefono, correo, edad, estado, municipio, colonia, ocupacion, nacionalidad, identificacion,comprobante, imagen1, cadena1, imagen2, cadena2, imagen3, cadena3, imagen4, cadena4, manifiesto) VALUES('$nombre','$telefono','$correo',$edad,'$estado','$municipio','$colonia','$ocupacion','$nacionalidad','$rutaIde','$rutaCom','$rutaI1','$cadena1','$rutaI2','$cadena2','$rutaI3','$cadena3','$rutaI4','$cadena4','$rutaMan')";
+    $query = "INSERT INTO registro(nombre, telefono, correo, edad, estado, municipio, colonia, ocupacion, nacionalidad, identificacion,comprobante, imagen1, cadena1, descripcion1, imagen2, cadena2, descripcion2, imagen3, cadena3, descripcion3, imagen4, cadena4, descripcion4, manifiesto) VALUES('$nombre','$telefono','$correo',$edad,'$estado','$municipio','$colonia','$ocupacion','$nacionalidad','$rutaIde','$rutaCom','$rutaI1','$cadena1','$descripcion1','$rutaI2','$cadena2','$descripcion2','$rutaI3','$cadena3','$descripcion3','$rutaI4','$cadena4','$descripcion4','$rutaMan')";
 
     $conexion = conectar();
 
@@ -102,7 +110,7 @@
         exit;
 
     }else{
-        echo "Fallo";
+        echo "Falló";
     }
 
     desconectar($conexion);
