@@ -467,7 +467,28 @@
 </script>
 
 <script>
-    function validaTam(){
+    function validaTam() {
+        for (let i = 1; i <= 4; i++) {
+            let input = document.getElementById('imagen' + i);
+
+            if (input.files && input.files[0]) {
+                let imagen = new Image();
+                imagen.src = URL.createObjectURL(input.files[0]);
+
+                imagen.onload = (function(index) {
+                    return function() {
+                        let width = imagen.width;
+                        let height = imagen.height;
+                        if (width !== 1200 || height !== 448) {
+                            alert('La imagen ' + index + ' no es válida, debe tener las dimensiones 1200 x 448 px.\nLas dimensiones de tu imagen son: \n' + 'Ancho: ' + width + ' px\n' + 'Alto: ' + height + ' px');
+                            document.getElementById('imagen' + index).value = "";
+                        }
+                    };
+                })(i);
+            }
+        }
+    }
+   /* function validaTam(){
 
         for(let i = 1; i <= 4; i++ ){
             var input = document.getElementById('imagen'+i+'');
@@ -484,9 +505,8 @@
                     }
                 };
             }
-        }
-        
-    }
+        } 
+    }*/
 </script>
 
 <script>
