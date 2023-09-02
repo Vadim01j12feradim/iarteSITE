@@ -245,6 +245,7 @@
         
                                     <div class="form-group">
                                         <label for="manifiesto">* Manifiesto firmado (PDF)</label>
+                                        <li style="text-align: initial;">Descargar, rellenar y firmar el documento de MANIFIESTO.<br> <a href="./files/Manifiesto_1ER CONCURSO IA.doc" download="Manifiesto_1ER CONCURSO IA.doc">Descargalo aquí.</a></li>
                                         <input type="file" class="form-control-file" id="manifiesto" name="manifiesto" accept="application/pdf" required>
                                     </div>
                                     <br>
