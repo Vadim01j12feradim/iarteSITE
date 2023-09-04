@@ -1,15 +1,16 @@
 <?php
     include('conexion.php');
 
-    $nombre = $_POST['nombre'];
-    $telefono = $_POST['telefono'];
-    $correo = $_POST['correo'];
-    $edad = $_POST['edad'];
-    $estado = $_POST['estado'];
-    $municipio = $_POST['municipio'];
-    $colonia = $_POST['colonia'];
-    $ocupacion = $_POST['ocupacion'];
-    $nacionalidad = $_POST['nacionalidad'];
+    $conexion = conectar();
+    $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
+    $telefono = mysqli_real_escape_string($conexion, $_POST['telefono']);
+    $correo = mysqli_real_escape_string($conexion, $_POST['correo']);
+    $edad = mysqli_real_escape_string($conexion, $_POST['edad']);
+    $estado = mysqli_real_escape_string($conexion, $_POST['estado']);
+    $municipio = mysqli_real_escape_string($conexion, $_POST['municipio']);
+    $colonia = mysqli_real_escape_string($conexion, $_POST['colonia']);
+    $ocupacion = mysqli_real_escape_string($conexion, $_POST['ocupacion']);
+    $nacionalidad = mysqli_real_escape_string($conexion, $_POST['nacionalidad']);
 
     $identificacion = $telefono.$_FILES['identificacion']['name'];
     $tmpIdentificacion = $_FILES['identificacion']['tmp_name'];
@@ -23,8 +24,8 @@
         $tmpImagen1 = $_FILES['imagen1']['tmp_name'];
         move_uploaded_file($tmpImagen1,'img'.'/'.$imagen1);
         $rutaI1 = './img/'.$imagen1;
-        $cadena1 = $_POST['cadena1'];
-        $descripcion1 = $_POST['descripcion1'];
+        $cadena1 = mysqli_real_escape_string($conexion, $_POST['cadena1']);
+        $descripcion1 = mysqli_real_escape_string($conexion, $_POST['descripcion1']);
     }else{
         $rutaI1 = NULL;
         $cadena1 = NULL;
@@ -37,8 +38,8 @@
         $tmpImagen2 = $_FILES['imagen2']['tmp_name'];
         move_uploaded_file($tmpImagen2,'img'.'/'.$imagen2);
         $rutaI2 = './img/'.$imagen2;
-        $cadena2 = $_POST['cadena2'];
-        $descripcion2 = $_POST['descripcion2'];
+        $cadena2 = mysqli_real_escape_string($conexion, $_POST['cadena2']);
+        $descripcion2 = mysqli_real_escape_string($conexion, $_POST['descripcion2']);
     }else{
         $rutaI2 = NULL;
         $cadena2 = NULL;
@@ -50,8 +51,8 @@
         $tmpImagen3 = $_FILES['imagen3']['tmp_name'];
         move_uploaded_file($tmpImagen3,'img'.'/'.$imagen3);
         $rutaI3 = './img/'.$imagen3;
-        $cadena3 = $_POST['cadena3'];
-        $descripcion3 = $_POST['descripcion3'];
+        $cadena3 = mysqli_real_escape_string($conexion, $_POST['cadena3']);
+        $descripcion3 = mysqli_real_escape_string($conexion, $_POST['descripcion3']);
     }else{
         $rutaI3 = NULL;
         $cadena3 = NULL;
@@ -63,8 +64,8 @@
         $tmpImagen4 = $_FILES['imagen4']['tmp_name'];
         move_uploaded_file($tmpImagen4,'img'.'/'.$imagen4);
         $rutaI4 = './img/'.$imagen4;
-        $cadena4 = $_POST['cadena4'];
-        $descripcion4 = $_POST['descripcion4'];
+        $cadena4 = mysqli_real_escape_string($conexion, $_POST['cadena4']);
+        $descripcion4 = mysqli_real_escape_string($conexion, $_POST['descripcion4']);
     }else{
         $rutaI4 = NULL;
         $cadena4 = NULL;
@@ -102,7 +103,6 @@
 
     $query = "INSERT INTO registro(nombre, telefono, correo, edad, estado, municipio, colonia, ocupacion, nacionalidad, identificacion,comprobante, imagen1, cadena1, descripcion1, imagen2, cadena2, descripcion2, imagen3, cadena3, descripcion3, imagen4, cadena4, descripcion4, manifiesto) VALUES('$nombre','$telefono','$correo',$edad,'$estado','$municipio','$colonia','$ocupacion','$nacionalidad','$rutaIde','$rutaCom','$rutaI1','$cadena1','$descripcion1','$rutaI2','$cadena2','$descripcion2','$rutaI3','$cadena3','$descripcion3','$rutaI4','$cadena4','$descripcion4','$rutaMan')";
 
-    $conexion = conectar();
 
     if(ejecutar($conexion,$query)){
         echo '<script>alert("Registro exitoso. Muchas gracias :D");</script>';
