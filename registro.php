@@ -571,7 +571,7 @@
                 const fileImg4 = archivoImg4.files[0];
 
 
-                const maxSizePdf = 1024 * 1024; // 1MB
+                const maxSizePdf = 1024 * 1024 * 5; // 5MB
                 const maxSizeImg = 1024 * 1024 * 5; // 5MB
                     
                     if(fileImg1){
@@ -608,19 +608,19 @@
                     }
 
                     if (fileIdentificacion.size > maxSizePdf) {
-                        alert("El archivo de identificación excede el tamaño máximo permitido de 1MB.");
-                        archivoIdentificacion.value = ''; // Limpiar el valor del input para permitir volver a seleccionar el archivo
+                        alert("El archivo de identificación excede el tamaño máximo permitido de 5MB.");
+                        archivoIdentificacion.value = ''; 
                         validaArchivos++;
                     }
 
                     if (fileComprobante.size > maxSizePdf) {
-                        alert("El archivo de comprobante excede el tamaño máximo permitido de 1MB.");
-                        archivoComprobante.value = ''; // Limpiar el valor del input para permitir volver a seleccionar el archivo
+                        alert("El archivo de comprobante excede el tamaño máximo permitido de 5MB.");
+                        archivoComprobante.value = ''; 
                         validaArchivos++;
                     }
 
                     if (fileManifiesto.size > maxSizePdf) {
-                        alert("El archivo de manifiesto excede el tamaño máximo permitido de 1MB: ");
+                        alert("El archivo de manifiesto excede el tamaño máximo permitido de 5MB.");
                         archivoManifiesto.value = ''; // Limpiar el valor del input para permitir volver a seleccionar el archivo
                         validaArchivos++;
                     }
