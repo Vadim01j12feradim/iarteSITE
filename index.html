@@ -131,8 +131,19 @@
 
 							<!-- <li style="display: inline-block;"><a href="prensa.php">PRENSA</a></li> -->
 							<li style="display: inline-block;"><a  href="http://www.cucei.udg.mx/es/directorio/Departamento-de-Innovaci%C3%B3n-Basada-en-la-Informaci%C3%B3n-y-el-Conocimiento">Contacto</a></li>
-														
+							
+							<li>
+								<div id="countdown" style="font-size: 24px; text-align: center; margin-top: 20px;">
+									<span id="days" style="margin: 0 10px;"></span> días
+									<span id="hours" style="margin: 0 10px;"></span> horas
+									<span id="minutes" style="margin: 0 10px;"></span> minutos
+									<span id="seconds" style="margin: 0 10px;"></span> segundos
+								</div>
+							</li>
+							
 						</ul>
+						
+
 					<!-- </div> -->
 				</div>
 				</div>
@@ -598,6 +609,32 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	
+</body>
+</html>
 
+<script>
 
-</body></html>
+const targetDate = new Date('2023-09-17 23:59:59').getTime();
+
+function updateCountdown() {
+  const currentDate = new Date().getTime();
+  const timeLeft = targetDate - currentDate;
+
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+  document.getElementById('days').textContent = days;
+  document.getElementById('hours').textContent = hours;
+  document.getElementById('minutes').textContent = minutes;
+  document.getElementById('seconds').textContent = seconds;
+}
+
+// Actualiza el contador cada segundo
+setInterval(updateCountdown, 1000);
+
+// Llama a updateCountdown() inmediatamente para evitar un retraso en la visualización inicial
+updateCountdown();
+
+</script>
