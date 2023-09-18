@@ -133,10 +133,10 @@
 		
 		<div id="countdown" style="font-size: 24px; text-align: center; margin-top: 20px;">
 			Tiempo restante para participar:
-			<span id="days" style="margin: 0 10px;"></span> días
-			<span id="hours" style="margin: 0 10px;"></span> horas
-			<span id="minutes" style="margin: 0 10px;"></span> minutos
-			<span id="seconds" style="margin: 0 10px;"></span> segundos
+			<span id="days" style="margin: 0 10px;">0</span> días
+			<span id="hours" style="margin: 0 10px;">0</span> horas
+			<span id="minutes" style="margin: 0 10px;">0</span> minutos
+			<span id="seconds" style="margin: 0 10px;">0</span> segundos
 		</div>
 		<br>
 		<!-- BANNER -->
@@ -488,10 +488,10 @@ function updateCountdown() {
 }
 
 // Actualiza el contador cada segundo
-setInterval(updateCountdown, 1000);
+//setInterval(updateCountdown, 1000);
 
 // Llama a updateCountdown() inmediatamente para evitar un retraso en la visualización inicial
-updateCountdown();
+//updateCountdown();
 
 </script>
 
